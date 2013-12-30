@@ -12,3 +12,16 @@ Usage
     
     Event.unsubscribe("eventName");
     
+    
+Example
+========
+
+    function handler(msg) {
+        console.log(msg);
+    }
+    
+    Event.on("data:stored", handler);
+    
+    Event.emit("data:stored", "Data were already stored!");
+    
+    //output: "Data were already stored!"
